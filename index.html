@@ -48,7 +48,7 @@
                 owner = [...new Set(owner)];
                 console.log(owner);
                 let owners = $(`#owners`);
-                owner.empty();
+                owners.empty();
                 $.each(owner,(i,d)=>{
                     owner.append(`<option>${d}</option>`)
                 })
