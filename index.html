@@ -46,6 +46,7 @@
                     owner.push(d.owner);
                 });
                 owner = [...new Set(owner)];
+                cnosole.log(owner);
                 let owners = $(`#owners`);
                 owner.empty();
                 $.each(owner,(i,d)=>{
