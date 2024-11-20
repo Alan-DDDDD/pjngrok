@@ -9,7 +9,7 @@
 <body>
     <div class="card m-5 p-3">
         <h3><a href="https://javelin-epic-mainly.ngrok-free.app/DEMO/DEMO/Index" class="btn btn-primary">Demo</a></h3>
-        <select class="form-select" id="owners"></select>
+        <select class="form-select" id="owners" style="max-width: 200px;"></select>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -46,7 +46,6 @@
                     owner.push(d.owner);
                 });
                 owner = [...new Set(owner)];
-                console.log(owner);
                 let owners = $(`#owners`);
                 owners.empty();
                 $.each(owner,(i,d)=>{
