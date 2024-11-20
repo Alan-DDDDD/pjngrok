@@ -12,6 +12,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>服務</th>
                     <th>程式負責人</th>
                     <th>程式代號</th>
                 </tr>
@@ -39,7 +40,7 @@
                 alert(`沒有資料`);
             }else{
                 $.each(data,(i,d)=>{
-                    table.append(`<tr><td>${d.owner}</td><td><a href="${d.url}">${d.item}</a></td><tr>`)
+                    table.append(`<tr><td>${d.service}</td><td>${d.owner}</td><td><a href="${d.url}">${d.item}</a></td><tr>`)
                 });
             }
         }
