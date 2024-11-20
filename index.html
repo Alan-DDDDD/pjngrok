@@ -57,7 +57,11 @@
         $(`#owners`).on('change',function(){
             let newOwner = $(this).val();
             $('#data tr').filter(function() {
-                $(this).toggle($(this).text().includes(newOwner));
+                if(newOwner ===''){
+                    $(this).show();
+                }else{
+                    $(this).toggle($(this).text().includes(newOwner));
+                }
             });
         })
     </script>
