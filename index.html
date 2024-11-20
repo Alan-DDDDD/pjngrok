@@ -26,7 +26,11 @@
         getList();
         async function getList(){
             let response  = await fetch("https://allowing-definite-monkey.ngrok-free.app/api/Demo/getUserList",{
-                method:"get"
+                method:"get",
+                headers :   new Headers({
+                  "ngrok-skip-browser-warning": "69420",
+                  //"authorization":""
+                })
             })
             let data = await response.json()
             let table = $(`#data`);
