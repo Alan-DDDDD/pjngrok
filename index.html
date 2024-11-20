@@ -48,6 +48,7 @@
                 owner = [...new Set(owner)];
                 let owners = $(`#owners`);
                 owners.empty();
+                owners.append(`<option value="">全部</option>`)
                 $.each(owner,(i,d)=>{
                     owners.append(`<option>${d}</option>`)
                 })
@@ -55,7 +56,6 @@
         }
         $(`#owners`).on('change',function(){
             let newOwner = $(this).val();
-            console.log(newOwner);
             $('#data tr').filter(function() {
                 $(this).toggle($(this).text().includes(newOwner));
             });
